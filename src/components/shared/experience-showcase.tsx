@@ -18,6 +18,7 @@ export function ExperienceShowcase({
             href={experience.url}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`Visit ${experience.title}`}
             className="grid grid-cols-[auto_1fr] gap-x-4 group hover:cursor-pointer transition-transform duration-200 hover:translate-x-1"
         >
             <ExperienceTimeline />
@@ -38,6 +39,7 @@ export function NoCurrentExperience() {
             href={siteConfig.cvSrc}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="View or download CV"
             className="grid grid-cols-[auto_1fr] gap-x-4 group hover:cursor-pointer transition-transform duration-200 hover:translate-x-1"
         >
             <ExperienceTimeline />

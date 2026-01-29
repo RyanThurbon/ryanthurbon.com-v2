@@ -10,12 +10,13 @@ export function Projects() {
             {projects.map((project, index) => (
                 <a
                     key={index}
-                    className="group hover:cursor-pointer"
+                    className="group"
                     href={project.source}
                     target="_blank"
                     rel="noreferrer"
+                    aria-label={`View ${project.title} on GitHub`}
                 >
-                    <Card className="bg-transparent group-hover:bg-card transition-colors duration-200 px-0">
+                    <Card className="bg-transparent group-hover:cursor-pointer group-hover:bg-card transition-colors duration-200">
                         <CardHeader>
                             <CardTitle className="flex items-center justify-between">
                                 <span className="group-hover:underline">{project.title}</span>

@@ -38,7 +38,7 @@ function RootDocument({ children }: { children: ReactNode }) {
             <body>
                 <Navbar />
                 <PageLayout>
-                    <main className="min-h-screen py-24">
+                    <main className="py-24">
                         <div className="flex flex-col gap-y-16">{children}</div>
                     </main>
                     <Footer />

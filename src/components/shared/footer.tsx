@@ -7,10 +7,10 @@ export function Footer() {
     return (
         <section id="footer" className="border-t pt-12 pb-24 border-border-subtle">
             <footer className="text-center space-y-5">
-                <h2 className="text-xl font-semibold">Building something practical?</h2>
+                <h2 className="text-xl font-semibold">Interested in reaching out?</h2>
                 <p className="text-muted-foreground mx-auto max-w-md">
-                    I’m always open to chatting about software projects, learning opportunities, or
-                    new challenges.
+                    I’m open to opportunities, collaborations, and professional inquiries. Feel free
+                    to reach out directly.
                 </p>
                 <a
                     href={`mailto:${siteConfig.socials.gmail}`}

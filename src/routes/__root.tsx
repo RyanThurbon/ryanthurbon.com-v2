@@ -3,6 +3,7 @@ import appCss from "../styles.css?url"
 import type { ReactNode } from "react"
 import { PageLayout } from "@/components/layouts/page-layout"
 import { Navbar } from "@/components/shared/navbar"
+import { Analytics } from "@vercel/analytics/react"
 
 export const Route = createRootRoute({
     head: () => ({
@@ -41,6 +42,7 @@ function RootDocument({ children }: { children: ReactNode }) {
                         <div className="flex flex-col gap-y-16">{children}</div>
                     </main>
                 </PageLayout>
+                <Analytics />
                 <Scripts />
             </body>
         </html>

@@ -2,10 +2,11 @@ import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/ca
 import { projects } from "@/config/projects"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { IconArrowRight } from "@tabler/icons-react"
+import { AnimatedSection } from "@/components/shared/animated-section.tsx"
 
 export function Projects() {
     return (
-        <section id="projects" className="flex flex-col gap-y-6">
+        <AnimatedSection id="projects" className="flex flex-col gap-y-6">
             <SectionHeading heading="What I've built" />
             {projects.map((project, index) => (
                 <a
@@ -30,6 +31,6 @@ export function Projects() {
                     </Card>
                 </a>
             ))}
-        </section>
+        </AnimatedSection>
     )
 }

@@ -3,7 +3,6 @@ import appCss from "../styles.css?url"
 import type { ReactNode } from "react"
 import { PageLayout } from "@/components/layouts/page-layout"
 import { Navbar } from "@/components/shared/navbar"
-import { Footer } from "@/components/shared/footer"
 
 export const Route = createRootRoute({
     head: () => ({
@@ -41,7 +40,6 @@ function RootDocument({ children }: { children: ReactNode }) {
                     <main className="py-24">
                         <div className="flex flex-col gap-y-16">{children}</div>
                     </main>
-                    <Footer />
                 </PageLayout>
                 <Scripts />
             </body>

@@ -1,4 +1,6 @@
 import { SectionHeading } from "@/components/shared/section-heading.tsx"
+import { AnimatedSection } from "@/components/shared/animated-section.tsx"
+import { Footer } from "@/components/shared/footer.tsx"
 
 const sections = [
     "The coding journey started back in high school with Delphi, sparking a lasting love for learning and building. Free time often means exploring new languages and frameworks — these days, it’s mostly React and modern web tech. Every dive into something new adds to the excitement of creating software that matters.",
@@ -12,7 +14,7 @@ const sections = [
 
 export function AboutPage() {
     return (
-        <section id="about" className="flex flex-col gap-y-6">
+        <AnimatedSection id="about" className="flex flex-col gap-y-6">
             <SectionHeading heading="About me" />
             <div className="font-medium text-lg capitalize tracking-wide">Hi! I'm Ryan Thurbon</div>
             {sections.map((section, index) => (
@@ -20,6 +22,7 @@ export function AboutPage() {
                     {section}
                 </p>
             ))}
-        </section>
+            <Footer />
+        </AnimatedSection>
     )
 }

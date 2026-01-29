@@ -1,4 +1,5 @@
 import { Education, Overview, Projects, Socials, WorkHistory } from "@/features/home/components"
+import { Footer } from "@/components/shared/footer.tsx"
 
 export function HomePage() {
     return (
@@ -8,6 +9,7 @@ export function HomePage() {
             <Projects />
             <WorkHistory />
             <Education />
+            <Footer />
         </>
     )
 }

@@ -1,0 +1,5 @@
+export * from "./overview"
+export * from "./projects"
+export * from "./work-history"
+export * from "./socials"
+export * from "./education"

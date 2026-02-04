@@ -46,7 +46,7 @@ export function NoCurrentExperience() {
             <ExperienceOverview
                 title="No current professional experience"
                 roleOrQualification={siteConfig.openToWork ? "Open to work" : "Not open to work"}
-                description="Seeking internships or graduate opportunities in Software Engineering"
+                description="Seeking internships or graduate opportunities in Software Engineering."
             />
         </a>
     )

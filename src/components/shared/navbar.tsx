@@ -10,6 +10,7 @@ import { Link } from "@tanstack/react-router"
 import { cn } from "@/lib/utils.ts"
 import { IconChevronDown } from "@tabler/icons-react"
 import { buttonVariants } from "@/components/ui/button"
+import { siteConfig } from "@/config/site-config.ts"
 
 const navItems = [
     {
@@ -41,6 +42,15 @@ export function Navbar() {
 function DesktopView() {
     return (
         <div className="hidden md:flex md:items-center md:gap-x-1">
+            <a
+                href={siteConfig.cvSrc}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View or Download CV"
+                className={cn(buttonVariants({ variant: "ghost" }), "text-muted-foreground")}
+            >
+                Download CV
+            </a>
             {navItems.map((item, index) => (
                 <Link
                     key={index}
@@ -70,6 +80,18 @@ function MobileView() {
                     <SheetTitle className="sr-only">Menu</SheetTitle>
                     <SheetDescription className="text-foreground">ryanthurbon.com</SheetDescription>
                 </SheetHeader>
+                <a
+                    href={siteConfig.cvSrc}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View or Download CV"
+                    className={cn(
+                        buttonVariants({ variant: "ghost" }),
+                        "text-muted-foreground inline-block px-4",
+                    )}
+                >
+                    Download CV
+                </a>
                 {navItems.map((item, index) => (
                     <Link
                         key={index}

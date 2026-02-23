@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/shared/section-heading.tsx"
 const sections = [
     "The coding journey started back in high school with Delphi, sparking a lasting love for learning and building. Free time often means exploring new languages and frameworks — these days, it’s mostly React and modern web tech.",
 
-    "I build tools that make life easier, approaching every project with curiosity and persistence.I focus on clean, maintainable systems and simple, effective solutions, where usability comes first for both developers and users.",
+    "I build tools that make life easier, approaching every project with curiosity and persistence. I focus on clean, maintainable systems and simple, effective solutions, where usability comes first for both developers and users.",
 
     "Tackling challenges that require creative problem-solving and careful thinking is where the work gets exciting.",
 

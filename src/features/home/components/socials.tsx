@@ -1,14 +1,14 @@
+import { AnimatedSection } from "@/components/shared/animated-section.tsx"
 import { Icons } from "@/components/shared/icons"
 import { Separator } from "@/components/ui/separator"
 import { siteConfig } from "@/config/site-config"
 import { IconMailForward } from "@tabler/icons-react"
-import { AnimatedSection } from "@/components/shared/animated-section.tsx"
 
 export function Socials() {
     return (
         <AnimatedSection id="socials">
             <Separator />
-            <div className="flex flex-wrap items-center justify-center p-6 gap-x-8 gap-y-4 text-muted-foreground text-sm">
+            <div className="flex flex-wrap items-center justify-center py-6 gap-x-8 gap-y-4 text-muted-foreground text-sm">
                 <a
                     href={`mailto:${siteConfig.socials.gmail}`}
                     className="group flex items-center gap-x-2"

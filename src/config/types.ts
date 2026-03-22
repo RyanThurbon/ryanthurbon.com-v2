@@ -20,3 +20,11 @@ export interface WithLogo {
 export interface WithURL {
     url: string
 }
+
+export interface WithRole {
+    role: string
+}
+
+export interface WithQualification {
+    qualification: string
+}

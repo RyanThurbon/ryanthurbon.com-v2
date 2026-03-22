@@ -1,18 +1,10 @@
 import { Separator } from "@/components/ui/separator"
 import { EducationItem } from "@/config/education"
-import { JobItem } from "@/config/jobs.ts"
-import { Activity } from "react"
-import { siteConfig } from "@/config/site-config"
+import { isJobItem, JobItem } from "@/config/jobs.ts"
 
 type ExperienceItem = EducationItem | JobItem
 
-export function ExperienceShowcase({
-    experience,
-    description,
-}: {
-    experience: ExperienceItem
-    description?: string
-}) {
+export function ExperienceShowcase({ experience }: { experience: ExperienceItem }) {
     return (
         <a
             href={experience.url}
@@ -22,32 +14,7 @@ export function ExperienceShowcase({
             className="grid grid-cols-[auto_1fr] gap-x-4 group hover:cursor-pointer transition-transform duration-200 hover:translate-x-1"
         >
             <ExperienceTimeline />
-            <ExperienceOverview
-                title={experience.title}
-                roleOrQualification={
-                    "role" in experience ? experience.role : experience.qualification
-                }
-                description={"description" in experience ? experience.description : description}
-            />
-        </a>
-    )
-}
-
-export function NoCurrentExperience() {
-    return (
-        <a
-            href={siteConfig.cvSrc}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="View or download CV"
-            className="grid grid-cols-[auto_1fr] gap-x-4 group hover:cursor-pointer transition-transform duration-200 hover:translate-x-1"
-        >
-            <ExperienceTimeline />
-            <ExperienceOverview
-                title="No current professional experience"
-                roleOrQualification={siteConfig.openToWork ? "Open to work" : "Not open to work"}
-                description="Seeking internships or graduate opportunities in Software Engineering."
-            />
+            <ExperienceOverview experience={experience} />
         </a>
     )
 }
@@ -64,24 +31,17 @@ function ExperienceTimeline() {
     )
 }
 
-function ExperienceOverview({
-    title,
-    roleOrQualification,
-    description,
-}: {
-    title: string
-    roleOrQualification: string
-    description?: string
-}) {
+function ExperienceOverview({ experience }: { experience: ExperienceItem }) {
+    const roleOrQualification = isJobItem(experience) ? experience.role : experience.qualification
+
     return (
         <div className="flex flex-col gap-y-2">
             <div className="flex flex-col gap-y-1">
-                <h3 className="font-medium">{title}</h3>
+                <h3 className="font-medium">{experience.title}</h3>
+                <span className="text-xs text-muted-foreground">{experience.period}</span>
                 <p className="text-sm text-muted-subtle">{roleOrQualification}</p>
             </div>
-            <Activity mode={description ? "visible" : "hidden"}>
-                <p className="text-sm text-muted-foreground">{description}</p>
-            </Activity>
+            <p className="text-sm text-muted-foreground">{experience.description}</p>
         </div>
     )
 }

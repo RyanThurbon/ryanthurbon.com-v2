@@ -1,8 +1,8 @@
-import { IconMailFilled } from "@tabler/icons-react"
+import { AnimatedSection } from "@/components/shared/animated-section.tsx"
+import { buttonVariants } from "@/components/ui/button"
 import { siteConfig } from "@/config/site-config"
 import { cn } from "@/lib/utils.ts"
-import { buttonVariants } from "@/components/ui/button"
-import { AnimatedSection } from "@/components/shared/animated-section.tsx"
+import { IconMailFilled } from "@tabler/icons-react"
 
 export function Footer() {
     return (

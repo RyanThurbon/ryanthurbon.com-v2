@@ -8,7 +8,7 @@ export function Education() {
         <AnimatedSection id="education" className="flex flex-col gap-y-6">
             <SectionHeading heading="Education" />
             {education.map((education, index) => (
-                <ExperienceShowcase key={index} experience={education} />
+                <ExperienceShowcase key={index} experience={education}/>
             ))}
         </AnimatedSection>
     )

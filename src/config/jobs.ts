@@ -15,7 +15,7 @@ export const jobs: JobItem[] = [
             "Sintrex is the largest monitoring specialist company in Africa. Sintrex monitors and measures just about anything, helping you gain valuable insight into your IT infrastructure.",
         role: "Developer Intern",
         url: "https://sintrex.com/",
-        period: "2026 - Present",
+        period: "Apr 2026 - Present",
         durationInYears: 0,
     },
 ]

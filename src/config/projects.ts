@@ -3,7 +3,6 @@ import { WithTitleDescription, WithURL } from "@/config/types.ts"
 export interface ProjectItem extends WithTitleDescription, WithURL {
     stack: string[]
     source: string
-    preview: string
 }
 
 export const projects: ProjectItem[] = [
@@ -14,7 +13,6 @@ export const projects: ProjectItem[] = [
         url: "https://movify-three.vercel.app/",
         stack: ["React", "Typescript", "TailwindCSS", "Tanstack"],
         source: "https://github.com/RyanThurbon/movify",
-        preview: "/projects/movify.png",
     },
     {
         title: "Free2Play",
@@ -23,7 +21,6 @@ export const projects: ProjectItem[] = [
         url: "https://free2play-iota.vercel.app/",
         stack: ["React", "Typescript", "TailwindCSS", "Tanstack"],
         source: "https://github.com/RyanThurbon/free-2-play",
-        preview: "/projects/free-2-play.png",
     },
     {
         title: "TechTrove",
@@ -32,6 +29,5 @@ export const projects: ProjectItem[] = [
         url: "https://techtrove-delta.vercel.app/",
         stack: ["React", "Typescript", "TailwindCSS", "Tanstack"],
         source: "https://github.com/RyanThurbon/tech-trove",
-        preview: "/projects/tech-trove.png",
     },
 ]

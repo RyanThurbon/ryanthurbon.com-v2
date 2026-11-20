@@ -11,7 +11,7 @@ export const projects: ProjectItem[] = [
         description: "Stats, charts and changes for every game on Steam, so you can see what's happening on Steam as it happens.",
         url: "https://shelfwatch.net/",
         stack: ["Vue", "Bun", "Postgres", "Typescript", "TailwindCSS", "Tanstack"],
-        source: "https://github.com/RyanThurbon",
+        source: "https://shelfwatch.net/",
     },
     {
         title: "Movify",
